@@ -1,0 +1,24 @@
+
+*{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    background-color: rgb(189, 189, 189);
+    margin: 10px;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+button{
+    padding: 3px;
+}
+
+/*---------------------------------------------------------------------------------------------------*/
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
