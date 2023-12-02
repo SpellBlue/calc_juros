@@ -9,48 +9,47 @@
 <body>
     <div class="container">
         <h1>Juros Simples</h1>
-        <label for="spreço">Preço do Produto:</label>
-        <input type="number" name="spreço" id="spreço">
-        <label for="spreço">R$</label><br>
+        <div class="container2">
+            <label for="spreço">Valor:</label><br>
+            <input type="number" name="spreço" id="spreço">
+            <label for="spreço">R$</label><br>
 
-        <label for="staxa">Taxa de Juros:</label>
-        <input type="number" name="staxa" id="staxa">
-        <label for="staxa">%</label><br>
+            <label for="staxa">Taxa de Juros:</label><br>
+            <input type="number" name="staxa" id="staxa">
+            <label for="staxa">%</label>  <br>
 
-        <label for="stempo">Tempo:</label>
-        <input type="number" name="stempo" id="stempo">
-        <select name="stempo" id="stemposelect">
-            <option value="mes">Mês(es)</option>
-            <option value="ano">Ano(s)</option>
-        </select>
+            <label for="stempo">Tempo:</label><br>
+            <input type="number" name="stempo" id="stempo">
+            <label for="stempo">Meses</label><br>
 
-        <button id="scalc" type="button">Calcular</button>
+            <button id="scalc" type="button">Calcular</button>
 
-        <div id="sjuros"></div>
-        <div id="stotal"></div>
+            <div id="sjuros">Juros:</div>
+            <div id="stotal">Total:</div>
+        </div>
     </div>
 
     <div class="container">
         <h1>Juros Compostos</h1>
-        <label for="cpreço">Preço do Produto:</label>
-        <input type="number" name="cpreço" id="cpreço">
-        <label for="cpreço">R$</label><br>
+        <div class="container2">
+            <label for="cpreço">Valor:</label><br>
+            <input type="number" name="cpreço" id="cpreço">
+            <label for="cpreço">R$</label><br>
 
-        <label for="ctaxa">Taxa de Juros:</label>
-        <input type="number" name="ctaxa" id="ctaxa">
-        <label for="ctaxa">%</label><br>
+            <label for="ctaxa">Taxa de Juros:</label><br>
+            <input type="number" name="ctaxa" id="ctaxa">
+            <label for="ctaxa">%</label>  <br>
 
-        <label for="ctempo">Tempo:</label>
-        <input type="number" name="ctempo" id="ctempo">
-        <select name="ctempo" id="ctemposelect">
-            <option value="mes">Mês(es)</option>
-            <option value="ano">Ano(s)</option>
-        </select>
-
-        <button id="ccalc" type="button">Calcular</button>
-
-        <div id="cjuros"></div>
-        <div id="ctotal"></div>
+            <label for="ctempo">Tempo:</label><br>
+            <input type="number" name="ctempo" id="ctempo">
+            <label for="ctempo">Meses</label><br>
+            
+            <button id="ccalc" type="button">Calcular </button>
+            
+            <div id="cequiv">Taxa Equivalente:</div>
+            <div id="cjuros">Juros:</div>
+            <div id="ctotal">Total:</div>
+        </div>
     </div>
 
     <script src="script.js"></script>
