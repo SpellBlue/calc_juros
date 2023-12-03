@@ -12,6 +12,11 @@ scalc.addEventListener('click',()=>{
     const staxa = document.querySelector('#staxa').value
     let stempo = document.querySelector('#stempo').value
 
+    if (spreço == '' || staxa == '' || stempo == ''){
+        window.alert('Preencha os campos corretamente')
+        return
+    }
+
     if ((selecttaxa == 'mes') && (selecttempo == 'ano')){
         stempo*=12
     }
@@ -23,19 +28,15 @@ scalc.addEventListener('click',()=>{
         this.juros = parseFloat(this.juros.toFixed(2))
         this.total = (parseFloat(spreço)+this.juros)
         this.total = parseFloat(this.total.toFixed(2))
-        if (isNaN(this.juros)){
-            window.alert('Preencha os campos corretamente')
+
+        if (selecttempo == 'ano'){
+            sequiv.innerHTML = `Taxa equivalente: ${equiv}% em ${document.querySelector('#stempo').value} anos`
         }
-        else{
-            if (selecttempo == 'ano'){
-                sequiv.innerHTML = `Taxa equivalente: ${equiv}% em ${document.querySelector('#stempo').value} anos`
-            }
-            else if(selecttempo == 'mes'){
-                sequiv.innerHTML = `Taxa equivalente: ${equiv}% em ${document.querySelector('#stempo').value} meses`
-            }
-            sjuros.innerHTML = `Juros: ${this.juros}R$`
-            stotal.innerHTML = `Total: ${this.total}R$`
+        else if(selecttempo == 'mes'){
+            sequiv.innerHTML = `Taxa equivalente: ${equiv}% em ${document.querySelector('#stempo').value} meses`
         }
+        sjuros.innerHTML = `Juros: ${this.juros}R$`
+        stotal.innerHTML = `Total: ${this.total}R$`
     })
 
 //------------------------------------------------------------------------------------------//
@@ -55,6 +56,11 @@ ccalc.addEventListener('click',()=>{
     const cpreço = document.querySelector('#cpreço').value
     let ctaxa = document.querySelector('#ctaxa').value
     let ctempo = document.querySelector('#ctempo').value
+
+    if (cpreço <= -1 || cpreço == '' || ctaxa <= -1 || ctaxa == '' || ctempo <= -1|| ctempo == ''){
+        window.alert('Preencha os campos corretamente')
+        return
+    }
 
     if ((selecttaxa == 'ano') && (selecttempo == 'mes')){
             ctaxa=ctaxa/12
@@ -86,17 +92,12 @@ ccalc.addEventListener('click',()=>{
     this.juros = (this.total-cpreço)
     this.juros = this.juros.toFixed(2)
     
-    if (isNaN(this.juros)){
-        window.alert('Preencha os campos corretamente')
+    if (selecttempo == 'ano'){
+        cequiv.innerHTML = `Taxa equivalente: ${this.equiv}% em ${document.querySelector('#ctempo').value} anos`
     }
-    else{
-        if (selecttempo == 'ano'){
-            cequiv.innerHTML = `Taxa equivalente: ${this.equiv}% em ${document.querySelector('#ctempo').value} anos`
-        }
-        else if(selecttempo == 'mes'){
-            cequiv.innerHTML = `Taxa equivalente: ${this.equiv}% em ${document.querySelector('#ctempo').value} meses`
-        }
-        cjuros.innerHTML = `Juros: ${this.juros}R$`
-        ctotal.innerHTML = `Total: ${this.total}R$`
+    else if(selecttempo == 'mes'){
+        cequiv.innerHTML = `Taxa equivalente: ${this.equiv}% em ${document.querySelector('#ctempo').value} meses`
     }
+    cjuros.innerHTML = `Juros: ${this.juros}R$`
+    ctotal.innerHTML = `Total: ${this.total}R$`
 })
