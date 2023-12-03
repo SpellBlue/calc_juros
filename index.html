@@ -16,16 +16,22 @@
 
             <label for="staxa">Taxa de Juros:</label><br>
             <input type="number" name="staxa" id="staxa">
-            <label for="staxa">%</label>  <br>
+            <select name="staxa" id="staxaselect">
+                <option value="mes">%/Mês</option>
+                <option value="ano">%/Ano</option>
+            </select><br>
 
             <label for="stempo">Tempo:</label><br>
             <input type="number" name="stempo" id="stempo">
-            <label for="stempo">Meses</label><br>
+            <select name="stempo" id="stemposelect">
+                <option value="mes">Mês</option>
+                <option value="ano">ano</option>
+            </select><br>
 
             <button id="scalc" type="button">Calcular</button>
 
-            <div id="sjuros">Juros:</div>
-            <div id="stotal">Total:</div>
+            <div id="sjuros"></div>
+            <div id="stotal"></div>
         </div>
     </div>
 
@@ -38,17 +44,23 @@
 
             <label for="ctaxa">Taxa de Juros:</label><br>
             <input type="number" name="ctaxa" id="ctaxa">
-            <label for="ctaxa">%</label>  <br>
+            <select name="ctaxa" id="ctaxaselect">
+                <option value="mes">%/Mês</option>
+                <option value="ano">%/Ano</option>
+            </select><br>
 
             <label for="ctempo">Tempo:</label><br>
             <input type="number" name="ctempo" id="ctempo">
-            <label for="ctempo">Meses</label><br>
+            <select name="ctempo" id="ctemposelect">
+                <option value="mes">Mês</option>
+                <option value="ano">ano</option>
+            </select><br>
             
             <button id="ccalc" type="button">Calcular </button>
             
-            <div id="cequiv">Taxa Equivalente:</div>
-            <div id="cjuros">Juros:</div>
-            <div id="ctotal">Total:</div>
+            <div id="cequiv"></div>
+            <div id="cjuros"></div>
+            <div id="ctotal"></div>
         </div>
     </div>
 
