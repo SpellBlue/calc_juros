@@ -48,16 +48,19 @@ ccalc.addEventListener('click',()=>{
     let ctaxa = document.querySelector('#ctaxa').value
     let ctempo = document.querySelector('#ctempo').value
 
+    if ((selecttaxa == 'ano') && (selecttempo == 'mes')){
+            ctaxa=ctaxa/12
+        }
+
     ctaxa = (1+ctaxa/100)
     
     let i = ctaxa
     
     if ((selecttaxa == 'mes') && (selecttempo == 'ano')){
         ctempo*=12
+        
     }
-    else if ((selecttaxa == 'ano') && (selecttempo == 'mes')){
-        ctempo/=12
-    }
+    
 
     while (ctempo>1){
         ctaxa*=i
