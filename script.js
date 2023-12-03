@@ -1,6 +1,7 @@
 
 const stotal = document.querySelector('#stotal')
 const sjuros = document.querySelector('#sjuros')
+const sequiv = document.querySelector('#sequiv')
 
 const scalc = document.querySelector('#scalc')
 
@@ -17,6 +18,7 @@ scalc.addEventListener('click',()=>{
     else if ((selecttaxa == 'ano') && (selecttempo == 'mes')){
         stempo/=12
     }
+        this.equiv = (parseFloat(document.querySelector('#staxa').value) * stempo)
         this.juros = (parseFloat(spreço)*parseFloat(staxa/100)*parseFloat(stempo))
         this.juros = parseFloat(this.juros.toFixed(2))
         this.total = (parseFloat(spreço)+this.juros)
@@ -25,6 +27,12 @@ scalc.addEventListener('click',()=>{
             window.alert('Preencha os campos corretamente')
         }
         else{
+            if (selecttempo == 'ano'){
+                sequiv.innerHTML = `Taxa equivalente: ${equiv}% em ${document.querySelector('#stempo').value} anos`
+            }
+            else if(selecttempo == 'mes'){
+                sequiv.innerHTML = `Taxa equivalente: ${equiv}% em ${document.querySelector('#stempo').value} meses`
+            }
             sjuros.innerHTML = `Juros: ${this.juros}R$`
             stotal.innerHTML = `Total: ${this.total}R$`
         }
@@ -61,7 +69,6 @@ ccalc.addEventListener('click',()=>{
         
     }
     
-
     while (ctempo>1){
         ctaxa*=i
         ctempo--
