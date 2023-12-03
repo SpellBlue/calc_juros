@@ -6,6 +6,10 @@ const sequiv = document.querySelector('#sequiv')
 const scalc = document.querySelector('#scalc')
 
 scalc.addEventListener('click',()=>{
+    stotal.innerHTML = ''
+    sjuros.innerHTML = ''
+    sequiv.innerHTML = ''
+    
     this.selecttaxa = document.querySelector('#staxaselect').value
     this.selecttempo = document.querySelector('#stemposelect').value
     const spreço = document.querySelector('#spreço').value
@@ -48,6 +52,8 @@ const cequiv = document.querySelector('#cequiv')
 const ccalc = document.querySelector('#ccalc')
 
 ccalc.addEventListener('click',()=>{
+    ctotal.innerHTML = ''
+    cjuros.innerHTML = ''
     cequiv.innerHTML = ''
 
     this.selecttaxa = document.querySelector('#ctaxaselect').value
