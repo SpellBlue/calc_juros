@@ -34,10 +34,10 @@ scalc.addEventListener('click',()=>{
         this.total = parseFloat(this.total.toFixed(2))
 
         if (selecttempo == 'ano'){
-            sequiv.innerHTML = `Taxa equivalente: ${equiv}% em ${document.querySelector('#stempo').value} anos`
+            sequiv.innerHTML = `Taxa equivalente: ${equiv}% em ${document.querySelector('#stempo').value} ano(s)`
         }
         else if(selecttempo == 'mes'){
-            sequiv.innerHTML = `Taxa equivalente: ${equiv}% em ${document.querySelector('#stempo').value} meses`
+            sequiv.innerHTML = `Taxa equivalente: ${equiv}% em ${document.querySelector('#stempo').value} mes(es)`
         }
         sjuros.innerHTML = `Juros: ${this.juros}R$`
         stotal.innerHTML = `Total: ${this.total}R$`
@@ -99,10 +99,10 @@ ccalc.addEventListener('click',()=>{
     this.juros = this.juros.toFixed(2)
     
     if (selecttempo == 'ano'){
-        cequiv.innerHTML = `Taxa equivalente: ${this.equiv}% em ${document.querySelector('#ctempo').value} anos`
+        cequiv.innerHTML = `Taxa equivalente: ${this.equiv}% em ${document.querySelector('#ctempo').value} ano(s)`
     }
     else if(selecttempo == 'mes'){
-        cequiv.innerHTML = `Taxa equivalente: ${this.equiv}% em ${document.querySelector('#ctempo').value} meses`
+        cequiv.innerHTML = `Taxa equivalente: ${this.equiv}% em ${document.querySelector('#ctempo').value} mes(es)`
     }
     cjuros.innerHTML = `Juros: ${this.juros}R$`
     ctotal.innerHTML = `Total: ${this.total}R$`
